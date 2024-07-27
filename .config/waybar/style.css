@@ -1,0 +1,203 @@
+* {
+    font-family: JetBrains Mono;
+    font-size: 14px;
+}
+
+window#waybar {
+    background-color: #000000;
+    color: #c4c4c4;
+}
+button {
+    border: none;
+    border-radius: 0;
+}
+button:hover {
+    background: #000000;
+    box-shadow: #c4c4c4;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: #000000;
+    color: #c4c4c4;
+}
+
+#workspaces button:hover {
+    background-color: #c4c4c4;
+    color: #000000;
+}
+
+#workspaces button.active {
+    background-color: #c4c4c4;
+    color: #000000;
+}
+#clock,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-notification,
+#tray,
+#idle_inhibitor{
+    padding: 0 5px;
+    color: #c4c4c4;
+}
+
+#battery{
+    padding: 0 8px;
+    color: #c4c4c4;
+} 
+#window,
+#workspaces {
+    margin: 0 5px;
+}
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#clock {
+    background-color: #000000;
+    color: #c4c4c4;
+}
+
+#battery {
+    background-color: #000000;
+    color: #c4c4c4;
+}
+
+#battery.charging, #battery.plugged {
+    color: #c4c4c4;
+    background-color: #000000;
+}
+
+@keyframes blink {
+    to {
+        background-color: #000000;
+        color: #c4c4c4;
+    }
+}
+
+#battery.critical:not(.charging) {
+    color: #B22222;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(30);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+label:focus {
+    background-color: #000000;
+}
+#backlight {
+    background-color: #000000;
+    color: #c4c4c4;
+}
+
+#network {
+    background-color: #000000;
+    color: #c4c4c4;
+}
+
+#network.disconnected {
+    background-color: #000000;
+    color: #B22222;
+}
+
+#pulseaudio {
+    background-color: #000000;
+    color: #c4c4c4;
+}
+
+#pulseaudio.muted {
+    background-color: #000000;
+    color: #c4c4c4;
+}
+
+#wireplumber {
+    background-color: #000000;
+    color: #c4c4c4;
+}
+
+#wireplumber.muted {
+    background-color: #000000;
+    color: #c4c4c4;
+}
+
+#tray {
+    background-color: #000000;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #000000;
+}
+
+#idle_inhibitor {
+    background-color: #000000;
+}
+
+#idle_inhibitor.activated {
+    background-color: #000000;
+    color: #c4c4c4;
+}
+
+#language {
+    background: #00b093;
+    color: #740864;
+    padding: 0 5px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state {
+    background: #97e1ad;
+    color: #000000;
+    padding: 0 0px;
+    margin: 0 5px;;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad.empty {
+	background-color: transparent;
+}
+
+#privacy {
+    padding: 0;
+}
+
+#privacy-item {
+    padding: 0 5px;
+    color: white;
+}
+
+#privacy-item.screenshare {
+    background-color: #cf5700;
+}
+
+#privacy-item.audio-in {
+    background-color: #1ca000;
+}
+
+#privacy-item.audio-out {
+    background-color: #0069d4;
+}
+
